@@ -322,23 +322,12 @@ const Index = () => {
       <footer className="py-12 px-6 border-t border-border bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex justify-center items-center">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Icon name="Sparkles" size={20} className="text-primary-foreground" />
                 </div>
                 <span className="font-heading font-bold text-lg">AI TECHNOLOGY</span>
-              </div>
-              <div className="flex gap-6">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Icon name="Github" size={20} />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Icon name="Twitter" size={20} />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Icon name="Linkedin" size={20} />
-                </a>
               </div>
             </div>
             <div className="mt-8 text-center text-sm text-muted-foreground">
