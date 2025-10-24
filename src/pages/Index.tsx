@@ -259,6 +259,66 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12 border-2 shadow-2xl animate-fade-in">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
+                  <Icon name="Lightbulb" size={32} className="text-primary" />
+                </div>
+                <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
+                  Заключение
+                </h2>
+              </div>
+              
+              <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+                <p>
+                  Искусственный интеллект — это не просто технология будущего. Это настоящее, которое уже меняет нашу жизнь каждый день. От персональных помощников в смартфонах до систем, управляющих глобальными процессами, ИИ становится неотъемлемой частью современного мира.
+                </p>
+                
+                <p>
+                  Мы стоим на пороге грандиозных перемен. То, что еще вчера казалось научной фантастикой, сегодня становится реальностью. Машины учатся понимать человеческую речь, распознавать эмоции, создавать искусство и принимать сложные решения. Но самое важное — они помогают нам становиться лучше.
+                </p>
+                
+                <p>
+                  Будущее искусственного интеллекта зависит от нас. От того, как мы будем его развивать, какие задачи ставить и какие ценности закладывать. ИИ может помочь решить самые острые проблемы человечества: от борьбы с болезнями до сохранения планеты для будущих поколений.
+                </p>
+                
+                <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-lg my-8">
+                  <p className="text-foreground font-medium text-xl italic">
+                    "Искусственный интеллект — это зеркало человеческого гения. Он отражает не только наши знания, но и наши надежды на лучшее будущее."
+                  </p>
+                </div>
+                
+                <p>
+                  Важно помнить, что ИИ — это инструмент. Мощный, революционный, но всё же инструмент. Он не заменяет человека, а дополняет его. Творчество, эмпатия, этика, способность к абстрактному мышлению — всё это остается исключительно человеческими качествами. ИИ усиливает наши способности, освобождает время для того, что действительно важно.
+                </p>
+                
+                <p>
+                  Эра искусственного интеллекта открывает перед человечеством беспрецедентные возможности. Возможности для роста, развития, познания. Возможности создать мир, где технологии служат людям, где знания доступны каждому, где границы возможного расширяются с каждым днем.
+                </p>
+                
+                <p className="text-foreground font-semibold text-xl pt-4">
+                  Будущее начинается сегодня. И оно полно удивительных перспектив.
+                </p>
+              </div>
+              
+              <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8 py-6 font-medium" onClick={() => scrollToSection('possibilities')}>
+                  <Icon name="ArrowUp" size={20} className="mr-2" />
+                  Вернуться к началу
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-medium">
+                  <Icon name="Share2" size={20} className="mr-2" />
+                  Поделиться
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <footer className="py-12 px-6 border-t border-border bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
