@@ -342,7 +342,7 @@ const Index = () => {
               </div>
             </div>
             <div className="mt-8 text-center text-sm text-muted-foreground">
-              © 2024 AI Technology. Исследуем будущее вместе.
+              © 2025 AI Technology. Исследуем будущее вместе.
             </div>
           </div>
         </div>
