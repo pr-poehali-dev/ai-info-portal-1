@@ -304,14 +304,10 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="mt-12 pt-8 border-t border-border flex justify-center">
                 <Button size="lg" className="text-lg px-8 py-6 font-medium" onClick={() => scrollToSection('possibilities')}>
                   <Icon name="ArrowUp" size={20} className="mr-2" />
                   Вернуться к началу
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-medium">
-                  <Icon name="Share2" size={20} className="mr-2" />
-                  Поделиться
                 </Button>
               </div>
             </Card>
