@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const Index = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -14,17 +24,29 @@ const Index = () => {
             <span className="font-heading font-bold text-xl">AI TECHNOLOGY</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#possibilities" className="text-sm font-medium hover:text-primary transition-colors">Возможности</a>
-            <a href="#potential" className="text-sm font-medium hover:text-primary transition-colors">Потенциал</a>
-            <a href="#future" className="text-sm font-medium hover:text-primary transition-colors">Будущее</a>
-            <Button size="sm" className="font-medium">
+            <button onClick={() => scrollToSection('possibilities')} className="text-sm font-medium hover:text-primary transition-colors">Возможности</button>
+            <button onClick={() => scrollToSection('potential')} className="text-sm font-medium hover:text-primary transition-colors">Потенциал</button>
+            <button onClick={() => scrollToSection('future')} className="text-sm font-medium hover:text-primary transition-colors">Будущее</button>
+            <Button size="sm" className="font-medium" onClick={() => scrollToSection('possibilities')}>
               Узнать больше
             </Button>
           </div>
-          <button className="md:hidden">
-            <Icon name="Menu" size={24} />
+          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
           </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border animate-fade-in">
+            <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+              <button onClick={() => scrollToSection('possibilities')} className="text-left text-sm font-medium hover:text-primary transition-colors py-2">Возможности</button>
+              <button onClick={() => scrollToSection('potential')} className="text-left text-sm font-medium hover:text-primary transition-colors py-2">Потенциал</button>
+              <button onClick={() => scrollToSection('future')} className="text-left text-sm font-medium hover:text-primary transition-colors py-2">Будущее</button>
+              <Button size="sm" className="font-medium" onClick={() => scrollToSection('possibilities')}>
+                Узнать больше
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       <section className="pt-32 pb-20 px-6">
@@ -39,11 +61,11 @@ const Index = () => {
               Технология, которая меняет мир и открывает безграничные возможности для человечества
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6 font-medium">
+              <Button size="lg" className="text-lg px-8 py-6 font-medium" onClick={() => scrollToSection('possibilities')}>
                 <Icon name="Sparkles" size={20} className="mr-2" />
                 Исследовать ИИ
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-medium">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-medium" onClick={() => scrollToSection('potential')}>
                 <Icon name="BookOpen" size={20} className="mr-2" />
                 Документация
               </Button>
